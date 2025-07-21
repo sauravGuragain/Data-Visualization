@@ -140,3 +140,31 @@ plt.plot(x,y3)
 plt.title("chart 3")
 plt.tight_layout()
 plt.show()
+# %%
+
+
+"""if we have to create a 4 chart subplots"""
+import matplotlib.pyplot as plt
+x = [1, 2, 3, 4, 5]
+y1 = [2, 4, 6, 8, 10]
+y2 = [1, 2, 1, 2, 1]
+y3 = [5, 3, 6, 2, 4]
+y4 = [9, 2, 1, 4, 1]
+
+plt.subplot(1,4,1)
+plt.plot(x,y1)
+plt.title("1st chart")
+
+plt.subplot(1,4,2)
+plt.plot(x,y2)
+plt.title("2nd. chart")
+plt.subplot(1,4,3)
+plt.plot(x,y3)
+plt.title("3rd. chart")
+
+plt.subplot(1,4,4)
+plt.plot(x,y4)
+plt.title("4rth chart")
+
+plt.tight_layout()
+plt.show()
