@@ -119,6 +119,24 @@ plt.title("Chart 2")
 plt.tight_layout()
 plt.show()
 # %%
+"""for  3 Charts  to subplots """
+import matplotlib.pyplot as plt
 
+x = [1, 2, 3, 4, 5]
+y1 = [2, 4, 6, 8, 10]
+y2 = [1, 2, 1, 2, 1]
+y3 = [5, 3, 6, 2, 4]
 
+plt.subplot(1,3,1)
+plt.plot(x,y1)
+plt.title("chart 1")
 
+plt.subplot(1,3,2)
+plt.plot(x,y2)
+plt.title("chart 2")
+
+plt.subplot(1,3,3)
+plt.plot(x,y3)
+plt.title("chart 3")
+plt.tight_layout()
+plt.show()
