@@ -6,7 +6,7 @@ y=[10,20,30,40,50] #no of sales
 
 plt.plot(x,y)
 plt.title("Daily Sales")
-plt.xlabel("Days")
+plt.xlabel("Din")
 plt.ylabel("Sales")
 plt.show()
 
@@ -60,6 +60,65 @@ plt.title("histogram ")
 plt.xlabel('Age')
 plt.show()
 
+"""Stack Plot"""
+import matplotlib.pyplot as plt
+day = [1, 2, 3, 4, 5]
+sleeping = [7, 8, 6, 11, 7]
+eating = [2, 2, 3, 2, 2]
+working = [8, 7, 7, 8, 7]
+playing = [7, 7, 8, 3, 8]
+plt.stackplot(day, sleeping ,eating ,working , playing , labels =['sleeping ,eating ,working , playing'])
+plt.title("Activity over 5 days in Stack Plot")
+plt.legend(loc='upper center')
+plt.xlabel=('day')
+plt.ylabel('Hours')
+plt.show()
+
+"""Adding Text to Charts Text and annotate"""
+plt.plot([1,2,3,4],[5,6,8,9])
+plt.text(2,6, "this is a point (2,6)")
+plt.show()
+
+"""annotate"""
+# %%
+
+plt.plot([1, 2, 3], [3, 6, 9])
+plt.annotate('Max Point', xy=(3, 9), xytext=(2, 10),
+             arrowprops=dict(facecolor='blue', shrink=0.05))
+plt.show()
+
+# %%
+"""Heatmap with Matplotlib"""
+import matplotlib.pyplot as plt
+import numpy as np 
+data=np.array([[10,20,30],
+               [30,40,50],
+               [50,60,70]])
+plt.imshow(data, cmap='hot',interpolation='nearest')
+plt.title('Heatmap')
+plt.colorbar()
+plt.show()
+# %%
+
+
+"""Multiple Charts in the Same Plot (Subplots)"""
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4]
+y1 = [10, 20, 25, 30]
+y2 = [30, 25, 20, 15]
+
+plt.subplot(1, 2, 1)   # 1 row, 2 columns, chart 1
+plt.plot(x, y1)
+plt.title("Chart 1")
+
+plt.subplot(1, 2, 2)   # 1 row, 2 columns, chart 2
+plt.plot(x, y2)
+plt.title("Chart 2")
+
+plt.tight_layout()
+plt.show()
+# %%
 
 
 
