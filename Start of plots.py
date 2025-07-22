@@ -185,3 +185,21 @@ df = pd.DataFrame(data)
 sns.stripplot(x='day',y='sales',data=df)
 plt.title("Custom Strip Plot")
 plt.show()
+# %%
+
+
+"""boxplot"""
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+data = {
+    "day": ["Mon", "Mon", "Tue", "Tue", "Wed", "Wed"],
+    "sales": [100, 120, 130, 110, 90, 80]
+}
+df = pd.DataFrame(data)
+
+plt.boxplot(day)
+plt.title("Box plot for day")
+plt.show()
+
