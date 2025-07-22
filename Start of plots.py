@@ -203,3 +203,36 @@ plt.boxplot(day)
 plt.title("Box plot for day")
 plt.show()
 
+# %%
+
+"""now using swarmplot"""
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+data = {
+    "day": ["Mon", "Mon", "Tue", "Tue", "Wed", "Wed"],
+    "sales": [100, 120, 130, 110, 90, 80]
+}
+df = pd.DataFrame(data)
+
+sns.swarmplot(x='day', y='sales', data=df )
+plt.title("Swarmplot")
+plt.show()
+
+"""actual swarmplot upper one has limited overlapping values"""
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+data = {
+    "day": ["Mon"] * 10 + ["Tue"] * 10 + ["Wed"] * 10,
+    "sales": np.random.randint(80, 140, 30)  
+}
+df = pd.DataFrame(data)
+
+sns.swarmplot(x='day', y='sales', data=df)
+plt.title("Swarm Plot with More Data")
+plt.show()
