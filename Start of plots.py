@@ -236,3 +236,21 @@ df = pd.DataFrame(data)
 sns.swarmplot(x='day', y='sales', data=df)
 plt.title("Swarm Plot with More Data")
 plt.show()
+
+# %%
+
+"""using seaborn for Joint Plot """
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+data = {
+    "day": ["Mon"] * 10 + ["Tue"] * 10 + ["Wed"] * 10,
+    "sales": np.random.randint(80, 140, 30)  
+}
+df = pd.DataFrame(data)
+
+sns.jointplot(x='day', y='sales',data=df)
+plt.title('jointplot')
+plt.show()
