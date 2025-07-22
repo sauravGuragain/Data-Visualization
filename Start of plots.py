@@ -168,3 +168,20 @@ plt.title("4rth chart")
 
 plt.tight_layout()
 plt.show()
+
+# %%
+
+""""Starting Seaborn"""
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+data = {
+    "day": ["Mon", "Mon", "Tue", "Tue", "Wed", "Wed"],
+    "sales": [100, 120, 130, 110, 90, 80]
+}
+df = pd.DataFrame(data)
+
+sns.stripplot(x='day',y='sales',data=df)
+plt.title("Custom Strip Plot")
+plt.show()
