@@ -9,3 +9,11 @@ ts = data["value"]
 ts.plot(title="Monthly Air Passengers (1949–1960)")
 plt.ylabel("Passengers (1000s)")
 plt.show()
+
+# %%
+
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+
+plot_acf(ts, lags=40)
+plot_pacf(ts, lags=40)
+plt.show()
